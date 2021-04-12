@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>Welcome back, {{ username }}!</p>
+<!-- <form id = "form_search" action = "/submit" method="GET">
+  <input id="search" name="search-query" type="text" placeholder="Search responses" />
+  <button class="btn-search" type="submit">SEARCH</button>
+</form> -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/index.css"> -->
+</head>
+
+<body>
+  <h1>Legal Triage</h1>
+
+  <form id="search" method="post" action="/search">
+    <input type="text" placeholder="Search by business issue" name="search">
+    <button type="submit">
+      <i class="fa fa-search"></i>
+    </button>
+  </form>
+
+  {% for item in data %}
+    <div class="lawyer_card">
+      <ul><strong>Name:</strong> {{item[0]}}</ul>
+      <ul><strong>Email:</strong> {{item[1]}}</ul>
+      <ul><strong>Phone Number:</strong> {{item[2]}}</ul>
+      <ul><strong>Department:</strong> {{item[3]}}</ul>
+      <ul><strong>Issues:</strong> {{item[4]}}</ul>
+    </div>
+  {% endfor %}
+
+  <div>
+    <form action="/action_page.php">
+      <label for="business-issue">Business Issue</label>
+      <input type="text" id="fname" name="businessissue" placeholder="Enter your business issue">
+
+      <label for="legal-issue">Legal Issue</label>
+      <input type="text" id="legal-issue" name="legalissue" placeholder="Enter your legal issue">
+
+      <label for="lawyer">Lawyer</label>
+      <input type="text" id="lawyer" name="lawyername" placeholder="Enter the lawyer's name">
+      <!-- <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select> -->
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+{% endblock %}
+
+<!-- <body>
+    <center>
+
+    </center>
+    <p></p>
+    <center>
+    {% for item in data %}
+        <tr >
+            <td> {{item[0]}} by {{item[1]}} </td>
+            </br>
+        </tr>
+    {% endfor %}
+    </center>
+</body> -->

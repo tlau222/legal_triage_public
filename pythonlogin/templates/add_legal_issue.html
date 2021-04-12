@@ -1,0 +1,50 @@
+<html>
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="/static/main.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <div class="info-input">
+			<!-- <form method="post" action="/action_page.php"> -->
+      <form method="post" action="/add_legal_issue">
+				<label for="business-issue">Business Issue</label>
+				<input type="text" id="fname" name="businessissue" placeholder="Enter your business issue">
+
+				<label for="legal-issue">Legal Issue</label>
+				<input type="text" id="legal-issue" name="legalissue" placeholder="Enter your legal issue">
+
+				<label for="lawyer">Legal Professional</label>
+				<input type="text" id="lawyer" name="lawyername" placeholder="Enter the legal professional's name">
+				<!-- <select id="country" name="country">
+					<option value="australia">Australia</option>
+					<option value="canada">Canada</option>
+					<option value="usa">USA</option>
+				</select> -->
+
+				<input type="submit" value="Submit">
+			</form>
+      {% if flag == 0 %}
+      {{ message }}
+      {% else %}
+      {{ message }} <a href="{{ url_for('add_business_issue') }}">'New Business Issue'</a>
+      {% endif %}
+		</div>
+    <!-- <div class="batch-upload">
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="search-queries-file" onchange="this.form.submit()" accept=".csv"/>
+        <i class="bi bi-box-arrow-up"></i>
+      </form>
+    </div> -->
+    <script src="js/extention/choices.js"></script>
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+{% endblock %}
+</html>

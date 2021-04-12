@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  </head>
+  <body>
+		<nav class="navtop">
+			<h1>Legal Triage</h1>
+			<ul>
+				<li><a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
+				</li>
+				<li><a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>&nbsp;Profile</a>
+				</li>
+        <li><a href="{{ url_for('add_legal_issue') }}"><i class="fas fa-upload"></i>&nbsp;New Legal Issue</a>
+				</li>
+        <li><a href="{{ url_for('add_business_issue') }}"><i class="fas fa-upload"></i>&nbsp;New Business Issue</a>
+        </li>
+				<li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i>&nbsp;Home</a>
+				</li>
+			</ul>
+			<!-- <div>
+				<h1>Home Page</h1>
+				<a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div> -->
+		</nav>
+		<div class="user-greeting">
+			<h2>Welcome back, {{ username }}!</h2>
+		</div>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+    <script src="js/extention/choices.js"></script>
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

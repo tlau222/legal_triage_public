@@ -1,0 +1,36 @@
+<html>
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="/static/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="profile">
+      <h2>Profile Page</h2>
+      <p>Your account details are below:</p>
+      <table>
+          <tr>
+              <td>Username:</td>
+              <td>{{ account[1] }}</td>
+          </tr>
+          <tr>
+              <td>Password:</td>
+              <td>{{ account[2] }}</td>
+          </tr>
+          <tr>
+              <td>Email:</td>
+              <td>{{ account[3] }}</td>
+          </tr>
+        </table>
+    </div>
+  </body>
+{% endblock %}
+</html>
