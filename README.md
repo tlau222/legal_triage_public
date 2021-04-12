@@ -1,6 +1,6 @@
 # Legal Triage
 
-A web application that helps business professionals with business issues find the appropriate legal professional to address these issues within a company.
+A web application that helps business professionals with business issues, find the appropriate legal professional to address these issues within a company.
 
 ## Setup
 
