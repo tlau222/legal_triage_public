@@ -17,7 +17,7 @@ In addition to Python, you will need to install PostgreSQL, a relational databas
 Once you've completed PostgreSQL installation, navigate to application pgAdmin4 to check for proper installation. pgAdmin4 will be used to manage your databases.
 
 ### Requirements
-Assuming you have cloned this repository to your local machine, navigate to the *pythonlogin* within the repository folder. In your terminal or command prompt, run `pip install -r requirements.txt`. This will install the dependencies required by this web application.
+Assuming you have cloned this repository to your local machine, navigate to the *pythonlogin* folder within the repository folder. In your terminal or command prompt, run `pip install -r requirements.txt`. This will install the dependencies required by this web application.
 
 ### Database Setup
 To set up the database with initial data, you can run the `starter.py` file. This can be done by running `python3 starter.py`. The `starter.py` file will create an inital user account (required by the application), batch upload business/legal issue data as well as legal professional information data. To change format or content of upload, see `process_raw_data()` and `insert_legal_professional_info()` in `starter.py`. To check whether batch upload, you can check both the terminal or command prompt, or pgAdmin4 to see if your database has been populated.
