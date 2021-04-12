@@ -14,7 +14,7 @@ If you do not have Python3:
 ### PostgreSQL
 In addition to Python, you will need to install PostgreSQL, a relational database management system. This can be done by downloading and installing [version 12.6](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). At the time of this project's creation on MacOS Big Sur, the application pgAdmin4 does not run on later versions of PostgreSQL, therefore, it is safer to start with *version 12.6*. After running the installer, use the default settings. When you set up a password for Postgres, use `P@55w0rd` as the password for superuser. 
 
-Once you've completed PostgreSQL installation, navigate to application pgAdmin4 to check for proper installation. pgAdmin4 will also be used to manage your databases.
+Once you've completed PostgreSQL installation, navigate to application pgAdmin4 to check for proper installation. pgAdmin4 will be used to manage your databases.
 
 ### Requirements
 Assuming you have cloned this repository to your local machine, navigate to the *pythonlogin* within the repository folder. In your terminal or command prompt, run `pip install -r requirements.txt`. This will install the dependencies required by this web application.
