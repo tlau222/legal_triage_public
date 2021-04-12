@@ -28,9 +28,9 @@ To run the web application, in your terminal or command prompt, in the *pythonlo
 2. `export FLASK_DEBUG=1`
 3. `flask run`
 
-This will start up your web application. To view in your browser, navigate to (localhost:5000/pythonlogin). You can sign in with the username: **test** and the password: **test**.
+This will start up your web application. To view in your browser, navigate to [localhost:5000/pythonlogin](localhost:5000/pythonlogin). You can sign in with the username: **test** and the password: **test**.
 
-## Future Development
+## Future Development/Known Issues
 #### User Accounts
 * There is no differentiation between administrative users and standard users
 
@@ -44,6 +44,7 @@ This will start up your web application. To view in your browser, navigate to (l
 
 #### Data Upload
 * There is no current method for batch data upload
+* Data upload features appear on the same page as search tool but should only be accessible to administrative users
 
 ## Developers
 This project/repo was built as a part of the Comp_Sci 397 course at Northwestern University by Tiffany Lau.
