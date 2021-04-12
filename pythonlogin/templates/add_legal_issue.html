@@ -24,11 +24,6 @@
 
 				<label for="lawyer">Legal Professional</label>
 				<input type="text" id="lawyer" name="lawyername" placeholder="Enter the legal professional's name">
-				<!-- <select id="country" name="country">
-					<option value="australia">Australia</option>
-					<option value="canada">Canada</option>
-					<option value="usa">USA</option>
-				</select> -->
 
 				<input type="submit" value="Submit">
 			</form>
@@ -38,12 +33,6 @@
       {{ message }} <a href="{{ url_for('add_business_issue') }}">'New Business Issue'</a>
       {% endif %}
 		</div>
-    <!-- <div class="batch-upload">
-      <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="search-queries-file" onchange="this.form.submit()" accept=".csv"/>
-        <i class="bi bi-box-arrow-up"></i>
-      </form>
-    </div> -->
     <script src="js/extention/choices.js"></script>
   </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 {% endblock %}

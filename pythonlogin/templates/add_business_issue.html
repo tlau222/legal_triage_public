@@ -14,7 +14,6 @@
   </head>
   <body>
     <div class="info-input">
-			<!-- <form method="post" action="/action_page.php"> -->
       <form method="post" action="/add_business_issue">
 				<label for="business-issue">Business Issue</label>
 				<input type="text" id="fname" name="businessissue" placeholder="Enter your business issue">
@@ -22,22 +21,10 @@
 				<label for="legal-issue">Legal Issue</label>
 				<input type="text" id="legal-issue" name="legalissue" placeholder="Enter your legal issue">
 
-				<!-- <select id="country" name="country">
-					<option value="australia">Australia</option>
-					<option value="canada">Canada</option>
-					<option value="usa">USA</option>
-				</select> -->
-
 				<input type="submit" value="Submit">
 			</form>
       {{ message }}
 		</div>
-    <!-- <div class="batch-upload">
-      <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="search-queries-file" onchange="this.form.submit()" accept=".csv"/>
-        <i class="bi bi-box-arrow-up"></i>
-      </form>
-    </div> -->
     <script src="js/extention/choices.js"></script>
   </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 {% endblock %}
