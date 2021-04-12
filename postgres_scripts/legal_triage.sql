@@ -56,54 +56,6 @@ CREATE INDEX ON business_legal USING GIST (business_issue_stemmed gist_trgm_ops,
 
 SELECT set_limit(0.3);
 
--- CREATE FUNCTION filtered_issues_table()
--- RETURNS TABLE (legal_issue varchar(255), similarity float8) LANGUAGE plpgsql AS
--- $$
---     DECLARE filtered_issues business_legal;
---     BEGIN
---         RETURN QUERY
---         SELECT business_legal.legal_issue
---             ,similarity(business_issue_stemmed, 'presentation review') AS similarity
---         INTO
---             filtered_issues
---         FROM business_legal
---         WHERE business_issue_stemmed % 'presentation review';
---     END;
--- $$;
-
--- DROP TABLE IF EXISTS filtered_issues;
--- CREATE TEMP TABLE filtered_issues (
---     legal_issue varchar(255),
---     similarity float8
--- );
---
--- -- drop table filtered_issues;
---
--- SELECT legal_issue
---     ,similarity(business_issue_stemmed, 'presentation review') AS similarity
--- INTO
---     filtered_issues
--- FROM business_legal
--- WHERE business_issue_stemmed % 'presentation review';
---
--- CREATE TEMP TABLE filtered_legal_issue_id (
---     legal_issue_id int,
---     similarity float8
--- );
---
--- drop table filtered_legal_issue_id;
---
--- SELECT li.legal_issue,
---        li.legal_issue_id
---     ,similarity
--- INTO
---     filtered_legal_issue_id
--- FROM
---     filtered_issues
--- JOIN legal_issues li ON li.legal_issue = filtered_issues.legal_issue;
-
--- select * from filtered_issues_table();
-
 SELECT DISTINCT ON (lawyer_info.lawyer_id)
         lawyer_info.lawyer_id,
        (first_name || ' ' || last_name) AS name,
