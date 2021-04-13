@@ -45,10 +45,12 @@ This will start up your web application. To view in your browser, navigate to [l
 * For queries with no search results, replace linked email address found in `main.py` line 270.
 * Because of `nltk` stemming of input and data, the search tool is limited by its ability to recognize mispelled words
 * Currently there are no corrective methods for incorrect or nonexistent search results. Machine learning implementation would be an ideal and powerful feature to add
+* There is no feature that balances the load of legal professionals returned in the results list. This means that when business professionals search for a legal professional, they may always pick the same legal professional that appears at the top of the list.
 
 #### Data Upload
 * There is no current method for batch data upload
 * Data upload features appear on the same page as search tool but should only be accessible to administrative users
+* There is no current method to remove or add new legal professionals to the database
 
 ## Developers
 This project/repo was built as a part of the Comp_Sci 397 course at Northwestern University by Tiffany Lau.
