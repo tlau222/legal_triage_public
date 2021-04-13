@@ -22,6 +22,10 @@ Assuming you have cloned this repository to your local machine, navigate to the 
 ### Database Setup
 To set up the database with initial data, you can run the `starter.py` file. This can be done by running `python3 starter.py`. The `starter.py` file will create an inital user account (required by the application), batch upload business/legal issue data as well as legal professional information data, and set up your databases for the web application. To change the format or content of upload, see `process_raw_data()` and `insert_legal_professional_info()` in `starter.py`. To check whether batch upload was successful, you can check both the terminal or command prompt, or pgAdmin4 to see if your databases have been populated.
 
+Files included in this repository that should be noted are: 
+* `data/legal_professional_info.csv` which contains the legal professional information
+* `data/raw_data.xlsx` which contains the batch of data prepared for initial upload in the `starter.py` file.
+
 ## Build/Run
 To run the web application, in your terminal or command prompt, in the *pythonlogin* folder, run the following:
 1. `export FLASK_APP=main.py`
